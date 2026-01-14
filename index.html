@@ -106,24 +106,102 @@
             width: 100%;
         }
         
-        /* Hero Section with Custom Background */
-        .hero {
-            padding: 5rem 0;
-            background: 
-                linear-gradient(rgba(0, 0, 0, 0.1), rgba(169, 169, 169, 0.2)),
-                url('./ocean.png');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            color: white;
-        }
-        
+    /* Hero Section with Custom Background - DESKTOP */
+.hero {
+    padding: 5rem 0;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.1), rgba(169, 169, 169, 0.2)),
+        url('./ocean.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.hero-content {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        padding: 1rem !important; /* Reduced padding */
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh; /* Take full height */
+    }
+    
+    /* Adjust profile container */
+    .profile-container {
+        margin-top: 2rem; /* Reduced from default */
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Adjust profile image size for mobile */
+    .profile-image {
+        width: 140px !important;
+        height: 140px !important;
+        margin-bottom: 1rem;
+    }
+    
+    /* Adjust heading size */
+    .hero h1 {
+        font-size: 2.2rem !important;
+        margin-bottom: 0.5rem !important;
+        padding: 0 1rem;
+    }
+    
+    /* Adjust subtitle */
+    .hero p {
+        font-size: 1.2rem !important;
+        margin-bottom: 1.5rem !important;
+        padding: 0 1rem;
+    }
+    
+    /* Adjust fun fact */
+    .fun-fact {
+        padding: 0.4rem 1rem !important;
+        margin-top: 1rem !important;
+        font-size: 0.9rem;
+    }
+
+/* For very small mobile devices */
+@media (max-width: 480px) {
+    .hero {
+        padding: 0.5rem 0 !important;
+        min-height: 100vh;
+    }
+    
+    .hero-content {
+        padding: 0.5rem !important;
+        min-height: 100vh;
+    }
+    
+    .profile-image {
+        width: 120px !important;
+        height: 120px !important;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem !important;
+        padding: 0 0.5rem;
+    }
+    
+    .hero p {
+        font-size: 1rem !important;
+        padding: 0 0.5rem;
+    }
+    
+    .original-bg,
+    .flipped-repeats {
+        background-size: 300% auto;
+    }
+}
         /* Bubble Container */
         .bubbles-container {
             position: absolute;
@@ -666,6 +744,11 @@
 
     <!-- Hero Section -->
     <section class="hero">
+    <!-- ADD THIS BACKGROUND CONTAINER HERE -->
+    <div class="hero-bg-container">
+        <div class="original-bg"></div>
+        <div class="flipped-repeats"></div>
+    </div>
         <!-- Bubble Container -->
         <div class="bubbles-container" id="bubblesContainer"></div>
         
